@@ -1,11 +1,7 @@
-import { motion } from 'framer-motion';
-import SummaryWidget from './widgets/SummaryWidget';
-import OverdueWidget from './widgets/OverdueWidget';
-import IssuesWidget from './widgets/IssuesWidget';
-import FeaturesWidget from './widgets/FeaturesWidget';
-import GithubIssuesWidget from './widgets/GithubIssuesWidget';
-import TaskDistributionWidget from './widgets/TaskDistributionWidget';
-import ScheduleWidget from './widgets/ScheduleWidget';
+import { motion } from "framer-motion";
+import SummaryWidget from "./widgets/SummaryWidget";
+import OverdueWidget from "./widgets/OverdueWidget";
+import GithubIssuesWidget from "./widgets/GithubIssuesWidget";
 
 function HomeTab() {
   const container = {
@@ -34,20 +30,8 @@ function HomeTab() {
       <motion.div variants={item}>
         <OverdueWidget />
       </motion.div>
-      <motion.div variants={item}>
-        <IssuesWidget />
-      </motion.div>
-      <motion.div variants={item}>
-        <FeaturesWidget />
-      </motion.div>
       <motion.div variants={item} className="sm:col-span-2 md:col-span-4">
         <GithubIssuesWidget />
-      </motion.div>
-      <motion.div variants={item} className="sm:col-span-2 md:col-span-4 lg:col-span-2">
-        <TaskDistributionWidget />
-      </motion.div>
-      <motion.div variants={item} className="sm:col-span-2 md:col-span-4 lg:col-span-2">
-        <ScheduleWidget />
       </motion.div>
     </motion.div>
   );

@@ -1,6 +1,5 @@
-import { Navigate } from 'react-router-dom';
-import CompactInvoicePage from './printable/CompactInvoicePage';
-import ModernInvoicePage from './printable/ModernInvoicePage';
+import { Navigate } from "react-router-dom";
+import ModernInvoicePage from "./printable/ModernInvoicePage";
 
 const invoicePagesConfig = {
   settings: {
@@ -10,18 +9,14 @@ const invoicePagesConfig = {
   },
   routes: [
     {
-      path: 'pages/invoice/printable',
+      path: "pages/invoice/printable",
       children: [
         {
-          path: '',
-          element: <Navigate to="compact" />,
+          path: "",
+          element: <Navigate to="modern" />,
         },
         {
-          path: 'compact',
-          element: <CompactInvoicePage />,
-        },
-        {
-          path: 'modern',
+          path: "modern",
           element: <ModernInvoicePage />,
         },
       ],

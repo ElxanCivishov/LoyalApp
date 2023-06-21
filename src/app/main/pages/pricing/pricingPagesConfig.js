@@ -1,9 +1,8 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
-import ModernPricingPage from './modern/ModernPricingPage';
-import SimplePricingPage from './simple/SimplePricingPage';
-import SinglePricingPage from './single/SinglePricingPage';
-import TablePricingPage from './table/TablePricingPage';
+import ModernPricingPage from "./modern/ModernPricingPage";
+import SinglePricingPage from "./single/SinglePricingPage";
+import TablePricingPage from "./table/TablePricingPage";
 
 const pricingPagesConfig = {
   settings: {
@@ -13,26 +12,23 @@ const pricingPagesConfig = {
   },
   routes: [
     {
-      path: 'pages/pricing',
+      path: "pages/pricing",
       children: [
         {
-          path: '',
+          path: "",
           element: <Navigate to="modern" />,
         },
         {
-          path: 'modern',
+          path: "modern",
           element: <ModernPricingPage />,
         },
+
         {
-          path: 'simple',
-          element: <SimplePricingPage />,
-        },
-        {
-          path: 'single',
+          path: "single",
           element: <SinglePricingPage />,
         },
         {
-          path: 'table',
+          path: "table",
           element: <TablePricingPage />,
         },
       ],

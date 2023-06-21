@@ -1,13 +1,5 @@
-import iconsUIConfig from './icons/iconsUIConfig';
-import tailwindcssUIConfig from './tailwindcss/tailwindcssUIConfig';
-import typographyUIConfig from './typography/typographyUIConfig';
-import pageLayoutsUIConfig from './page-layouts/pageLayoutsUIConfig';
+import iconsUIConfig from "./icons/iconsUIConfig";
 
-const userInterfaceConfigs = [
-  iconsUIConfig,
-  tailwindcssUIConfig,
-  typographyUIConfig,
-  pageLayoutsUIConfig,
-];
+const userInterfaceConfigs = [iconsUIConfig];
 
 export default userInterfaceConfigs;

@@ -1,9 +1,6 @@
-import { motion } from 'framer-motion';
-import BudgetDistributionWidget from './widgets/BudgetDistributionWidget';
-import WeeklyExpensesWidget from './widgets/WeeklyExpensesWidget';
-import MonthlyExpensesWidget from './widgets/MonthlyExpensesWidget';
-import YearlyExpensesWidget from './widgets/YearlyExpensesWidget';
-import BudgetDetailsWidget from './widgets/BudgetDetailsWidget';
+import { motion } from "framer-motion";
+import BudgetDistributionWidget from "./widgets/BudgetDistributionWidget";
+import BudgetDetailsWidget from "./widgets/BudgetDetailsWidget";
 
 function BudgetTab() {
   const container = {
@@ -30,17 +27,7 @@ function BudgetTab() {
         <BudgetDistributionWidget />
       </motion.div>
 
-      <div className="sm:col-span-3 lg:col-span-2 grid grid-cols-1 gap-y-24">
-        <motion.div variants={item} className="sm:col-span-2">
-          <WeeklyExpensesWidget />
-        </motion.div>
-        <motion.div variants={item} className="sm:col-span-2">
-          <MonthlyExpensesWidget />
-        </motion.div>
-        <motion.div variants={item} className="sm:col-span-2">
-          <YearlyExpensesWidget />
-        </motion.div>
-      </div>
+      {/* <div className="sm:col-span-3 lg:col-span-2 grid grid-cols-1 gap-y-24"></div> */}
 
       <motion.div variants={item} className="sm:col-span-6">
         <BudgetDetailsWidget />

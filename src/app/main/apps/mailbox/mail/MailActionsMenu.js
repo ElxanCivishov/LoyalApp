@@ -1,15 +1,15 @@
-import * as React from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import { useDispatch, useSelector } from 'react-redux';
-import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
-import { useNavigate } from 'react-router-dom';
-import { selectMail } from '../store/mailSlice';
-import { selectSpamFolderId, selectTrashFolderId } from '../store/foldersSlice';
-import { setActionToMails } from '../store/mailsSlice';
+import * as React from "react";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import IconButton from "@mui/material/IconButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { useDispatch, useSelector } from "react-redux";
+import FuseSvgIcon from "@fuse/core/FuseSvgIcon";
+import { useNavigate } from "react-router-dom";
+import { selectMail } from "../store/mailSlice";
+import { selectSpamFolderId, selectTrashFolderId } from "../store/foldersSlice";
+import { setActionToMails } from "../store/mailsSlice";
 
 function MailActionsMenu(props) {
   const { className } = props;
@@ -34,7 +34,7 @@ function MailActionsMenu(props) {
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
         <FuseSvgIcon>heroicons-outline:dots-vertical</FuseSvgIcon>
@@ -45,12 +45,14 @@ function MailActionsMenu(props) {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
         <MenuItem
           onClick={() => {
-            dispatch(setActionToMails({ type: 'unread', value: true, ids: [mail.id] }));
+            dispatch(
+              setActionToMails({ type: "unread", value: true, ids: [mail.id] })
+            );
             handleClose();
           }}
         >
@@ -62,7 +64,13 @@ function MailActionsMenu(props) {
 
         <MenuItem
           onClick={() => {
-            dispatch(setActionToMails({ type: 'folder', value: spamFolderId, ids: [mail.id] }));
+            dispatch(
+              setActionToMails({
+                type: "folder",
+                value: spamFolderId,
+                ids: [mail.id],
+              })
+            );
             handleClose();
           }}
         >
@@ -75,7 +83,11 @@ function MailActionsMenu(props) {
         <MenuItem
           onClick={() => {
             dispatch(
-              setActionToMails({ type: 'folder', value: trashFolderId, ids: [mail.id] })
+              setActionToMails({
+                type: "folder",
+                value: trashFolderId,
+                ids: [mail.id],
+              })
             ).then(() => {
               navigate(-1);
             });

@@ -1,8 +1,7 @@
-import { Navigate } from 'react-router-dom';
-import { lazy } from 'react';
+import { Navigate } from "react-router-dom";
+import { lazy } from "react";
 
-const ClassicSearchPage = lazy(() => import('./ClassicSearchPage'));
-const ModernSearchPage = lazy(() => import('./ModernSearchPage'));
+const ModernSearchPage = lazy(() => import("./ModernSearchPage"));
 
 const searchPagesConfig = {
   settings: {
@@ -12,19 +11,15 @@ const searchPagesConfig = {
   },
   routes: [
     {
-      path: 'pages/search',
+      path: "pages/search",
       children: [
         {
-          path: '',
+          path: "",
           element: <Navigate to="modern" />,
         },
         {
-          path: 'modern',
+          path: "modern",
           element: <ModernSearchPage />,
-        },
-        {
-          path: 'classic',
-          element: <ClassicSearchPage />,
         },
       ],
     },
