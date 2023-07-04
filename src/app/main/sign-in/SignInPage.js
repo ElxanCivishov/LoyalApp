@@ -163,7 +163,7 @@ function SignInPage() {
               Daxil ol
             </Button>
 
-            {/* <div className="flex items-center mt-32">
+            <div className="flex items-center mt-32">
               <div className="flex-auto mt-px border-t" />
               <Typography className="mx-8" color="text.secondary">
                 Or continue with
@@ -187,7 +187,7 @@ function SignInPage() {
                   feather:github
                 </FuseSvgIcon>
               </Button>
-            </div> */}
+            </div>
           </form>
         </div>
       </Paper>

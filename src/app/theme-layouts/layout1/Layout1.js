@@ -47,7 +47,7 @@ function Layout1(props) {
         </main>
       </div>
 
-      <RightSideLayout1 />
+      {/* <RightSideLayout1 /> */}
       <FuseMessage />
     </Root>
   );
