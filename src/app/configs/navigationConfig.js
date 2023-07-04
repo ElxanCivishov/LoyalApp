@@ -13,7 +13,6 @@ const navigationConfig = [
   {
     id: "dashboards",
     title: "Dashboards",
-    subtitle: "Unique dashboard designs",
     type: "group",
     icon: "heroicons-outline:home",
     translate: "DASHBOARDS",
@@ -33,6 +32,13 @@ const navigationConfig = [
         url: "/dashboards/analytics",
       },
       {
+        id: "dashboards.company",
+        title: "Company",
+        type: "item",
+        icon: "heroicons-outline:office-building",
+        url: "/dashboards/company",
+      },
+      {
         id: "dashboards.finance",
         title: "Finance",
         type: "item",
@@ -44,7 +50,6 @@ const navigationConfig = [
   {
     id: "apps",
     title: "Applications",
-    subtitle: "Custom made application designs",
     type: "group",
     icon: "heroicons-outline:cube",
     translate: "APPLICATIONS",
@@ -166,7 +171,6 @@ const navigationConfig = [
   {
     id: "pages",
     title: "Pages",
-    subtitle: "Custom made page designs",
     type: "group",
     icon: "heroicons-outline:document",
     children: [
@@ -378,7 +382,6 @@ const navigationConfig = [
   {
     id: "user-interface",
     title: "User Interface",
-    subtitle: "Building blocks of the UI & UX",
     type: "group",
     icon: "heroicons-outline:collection",
     children: [

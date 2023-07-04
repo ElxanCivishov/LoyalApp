@@ -17,7 +17,7 @@ import NavigationShortcuts from "../../shared-components/NavigationShortcuts";
 import NavigationSearch from "../../shared-components/NavigationSearch";
 import NavbarToggleButton from "../../shared-components/NavbarToggleButton";
 import UserMenu from "../../shared-components/UserMenu";
-import QuickPanelToggleButton from "../../shared-components/quickPanel/QuickPanelToggleButton";
+
 import ChatPanelToggleButton from "../../shared-components/chatPanel/ChatPanelToggleButton";
 
 function ToolbarLayout1(props) {
@@ -42,12 +42,7 @@ function ToolbarLayout1(props) {
         <Toolbar className="p-0 min-h-48 md:min-h-64">
           <div className="flex flex-1 px-16">
             <Hidden lgDown>
-              {(config.navbar.style === "style-3" ||
-                config.navbar.style === "style-3-dense") && (
-                <NavbarToggleButton className="w-40 h-40 p-0 mx-0" />
-              )}
-
-              {config.navbar.style === "style-1" && !navbar.open && (
+              {!navbar.open && (
                 <NavbarToggleButton className="w-40 h-40 p-0 mx-0" />
               )}
             </Hidden>
@@ -71,8 +66,6 @@ function ToolbarLayout1(props) {
             <Hidden lgUp>
               <ChatPanelToggleButton />
             </Hidden>
-
-            <QuickPanelToggleButton />
 
             <NotificationPanelToggleButton />
 
