@@ -90,7 +90,7 @@ const initialState = {
     displayName: "John Doe",
     photoURL: "assets/images/avatars/brian-hughes.jpg",
     email: "johndoe@withinpixels.com",
-    shortcuts: ["apps.calendar", "apps.mailbox", "apps.contacts", "apps.tasks"],
+    shortcuts: ["apps.contacts"],
   },
 };
 

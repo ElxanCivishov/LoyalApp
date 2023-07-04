@@ -1,10 +1,6 @@
 import Avatar from "@mui/material/Avatar";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import _ from "@lodash";
 import Button from "@mui/material/Button";
 import FuseSvgIcon from "@fuse/core/FuseSvgIcon";
 import { selectUser } from "app/store/userSlice";
@@ -37,7 +33,7 @@ function ProjectDashboardAppHeader(props) {
                 className="mx-6 leading-6 truncate"
                 color="text.secondary"
               >
-                You have 2 new messages and 15 new tasks
+                You have 2 new messages
               </Typography>
             </div>
           </div>
@@ -52,14 +48,6 @@ function ProjectDashboardAppHeader(props) {
             }
           >
             Messages
-          </Button>
-          <Button
-            className="whitespace-nowrap"
-            variant="contained"
-            color="secondary"
-            startIcon={<FuseSvgIcon size={20}>heroicons-solid:cog</FuseSvgIcon>}
-          >
-            Settings
           </Button>
         </div>
       </div>
