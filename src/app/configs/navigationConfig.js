@@ -39,6 +39,13 @@ const navigationConfig = [
         icon: "heroicons-outline:cash",
         url: "/dashboards/finance",
       },
+      {
+        id: "dashboards.user",
+        title: "Users",
+        type: "item",
+        icon: "heroicons-outline:cash",
+        url: "/dashboards/users",
+      },
     ],
   },
   {

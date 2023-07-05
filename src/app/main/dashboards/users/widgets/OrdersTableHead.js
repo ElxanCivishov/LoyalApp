@@ -15,7 +15,7 @@ import { Box } from "@mui/system";
 import TableHead from "@mui/material/TableHead";
 import FuseSvgIcon from "@fuse/core/FuseSvgIcon";
 import { darken, lighten } from "@mui/material/styles";
-import { removeOrders } from "../store/ordersSlice";
+// import { removeOrders } from "../store/ordersSlice";
 
 const rows = [
   {
@@ -33,6 +33,13 @@ const rows = [
     sort: true,
   },
   {
+    id: "photo",
+    align: "left",
+    disablePadding: false,
+    label: "Photo",
+    sort: true,
+  },
+  {
     id: "customer",
     align: "left",
     disablePadding: false,
@@ -40,24 +47,24 @@ const rows = [
     sort: true,
   },
   {
-    id: "total",
-    align: "right",
+    id: "email",
+    align: "left",
     disablePadding: false,
-    label: "Total",
+    label: "Email",
     sort: true,
   },
   {
-    id: "payment",
+    id: "phone",
     align: "left",
     disablePadding: false,
-    label: "Payment",
+    label: "Phone",
     sort: true,
   },
   {
-    id: "status",
+    id: "adress",
     align: "left",
     disablePadding: false,
-    label: "Status",
+    label: "Adress",
     sort: true,
   },
   {
@@ -137,7 +144,7 @@ function OrdersTableHead(props) {
                 <MenuList>
                   <MenuItem
                     onClick={() => {
-                      dispatch(removeOrders(selectedOrderIds));
+                      // dispatch(removeOrders(selectedOrderIds));
                       props.onMenuItemClick();
                       closeSelectedOrdersMenu();
                     }}
