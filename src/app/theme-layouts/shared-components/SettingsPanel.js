@@ -98,8 +98,8 @@ function SettingsPanel() {
   const settingsHandlers = useSwipeable(handlerOptions);
   const shemesHandlers = useSwipeable(handlerOptions);
 
-  const handleOpen = (panelId) => {
-    setOpen(panelId);
+  const handleOpen = () => {
+    setOpen(true);
   };
 
   const handleClose = () => {
@@ -110,20 +110,8 @@ function SettingsPanel() {
     <>
       <Root id="fuse-settings-schemes" className="buttonWrapper">
         <Button
-          className="settingsButton min-w-40 w-40 h-40 m-0"
-          onClick={() => handleOpen("settings")}
-          variant="text"
-          color="inherit"
-          disableRipple
-        >
-          <span>
-            <FuseSvgIcon size={20}>heroicons-solid:cog</FuseSvgIcon>
-          </span>
-        </Button>
-
-        <Button
           className="min-w-40 w-40 h-40 m-0"
-          onClick={() => handleOpen("schemes")}
+          onClick={() => handleOpen()}
           variant="text"
           color="inherit"
           disableRipple
@@ -133,37 +121,9 @@ function SettingsPanel() {
       </Root>
       <StyledDialog
         TransitionComponent={Transition}
-        aria-labelledby="settings-panel"
-        aria-describedby="settings"
-        open={open === "settings"}
-        onClose={handleClose}
-        BackdropProps={{ invisible: true }}
-        classes={{
-          paper: "shadow-lg",
-        }}
-        {...settingsHandlers}
-      >
-        <FuseScrollbars className="p-16 sm:p-32">
-          <IconButton
-            className="fixed top-0 ltr:right-0 rtl:left-0 z-10"
-            onClick={handleClose}
-            size="large"
-          >
-            <FuseSvgIcon>heroicons-outline:x</FuseSvgIcon>
-          </IconButton>
-
-          <Typography className="mb-32 font-semibold" variant="h6">
-            Theme Settings
-          </Typography>
-
-          <FuseSettings />
-        </FuseScrollbars>
-      </StyledDialog>
-      <StyledDialog
-        TransitionComponent={Transition}
         aria-labelledby="schemes-panel"
         aria-describedby="schemes"
-        open={open === "schemes"}
+        open={open}
         onClose={handleClose}
         BackdropProps={{ invisible: true }}
         classes={{

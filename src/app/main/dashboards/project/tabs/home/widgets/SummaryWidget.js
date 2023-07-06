@@ -1,12 +1,12 @@
-import IconButton from '@mui/material/IconButton';
-import Paper from '@mui/material/Paper';
-import Select from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
-import { memo, useState } from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import { useSelector } from 'react-redux';
-import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
-import { selectWidgets } from '../../../store/widgetsSlice';
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import Select from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
+import { memo, useState } from "react";
+import MenuItem from "@mui/material/MenuItem";
+import { useSelector } from "react-redux";
+import FuseSvgIcon from "@fuse/core/FuseSvgIcon";
+import { selectWidgets } from "../../../store/widgetsSlice";
 
 function SummaryWidget() {
   const widgets = useSelector(selectWidgets);
@@ -23,11 +23,11 @@ function SummaryWidget() {
       <div className="flex items-center justify-between px-8 pt-12">
         <Select
           className="mx-16"
-          classes={{ select: 'py-0 flex items-center' }}
+          classes={{ select: "py-0 flex items-center" }}
           value={currentRange}
           onChange={handleChangeRange}
           inputProps={{
-            name: 'currentRange',
+            name: "currentRange",
           }}
           variant="filled"
           size="small"

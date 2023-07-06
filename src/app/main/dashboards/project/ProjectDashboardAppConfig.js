@@ -1,16 +1,11 @@
-import { lazy } from 'react';
+import { lazy } from "react";
 
-const ProjectDashboardApp = lazy(() => import('./ProjectDashboardApp'));
+const ProjectDashboardApp = lazy(() => import("./ProjectDashboardApp"));
 
 const ProjectDashboardAppConfig = {
-  settings: {
-    layout: {
-      config: {},
-    },
-  },
   routes: [
     {
-      path: 'dashboards/project',
+      path: "dashboards/project",
       element: <ProjectDashboardApp />,
     },
   ],

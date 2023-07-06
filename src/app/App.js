@@ -25,11 +25,6 @@ import { AuthProvider } from "./auth/AuthContext";
 // axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 
 const emotionCacheOptions = {
-  rtl: {
-    key: "muirtl",
-    stylisPlugins: [rtlPlugin],
-    insertionPoint: document.getElementById("emotion-insertion-point"),
-  },
   ltr: {
     key: "muiltr",
     stylisPlugins: [],

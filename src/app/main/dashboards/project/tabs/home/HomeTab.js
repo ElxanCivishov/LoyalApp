@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import SummaryWidget from "./widgets/SummaryWidget";
-import OverdueWidget from "./widgets/OverdueWidget";
 import GithubIssuesWidget from "./widgets/GithubIssuesWidget";
 
 function HomeTab() {
@@ -26,9 +25,6 @@ function HomeTab() {
     >
       <motion.div variants={item}>
         <SummaryWidget />
-      </motion.div>
-      <motion.div variants={item}>
-        <OverdueWidget />
       </motion.div>
       <motion.div variants={item} className="sm:col-span-2 md:col-span-4">
         <GithubIssuesWidget />

@@ -13,41 +13,11 @@ const config = {
       display: true,
       style: "fixed",
     },
-    footer: {
-      display: true,
-      style: "fixed",
-    },
     leftSidePanel: {
       display: true,
     },
     rightSidePanel: {
       display: true,
-    },
-  },
-  form: {
-    footer: {
-      type: "group",
-      title: "Footer",
-      children: {
-        display: {
-          title: "Display",
-          type: "switch",
-        },
-        style: {
-          title: "Style",
-          type: "radio",
-          options: [
-            {
-              name: "Fixed",
-              value: "fixed",
-            },
-            {
-              name: "Static",
-              value: "static",
-            },
-          ],
-        },
-      },
     },
   },
 };

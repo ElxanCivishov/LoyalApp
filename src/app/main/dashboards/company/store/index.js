@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import widgets from "./widgetsSlice";
+import company from "./companySlice";
 
 const reducer = combineReducers({
-  widgets,
+  company,
 });
 
 export default reducer;
